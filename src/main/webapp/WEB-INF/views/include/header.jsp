@@ -61,11 +61,11 @@
                                     <ul class="list-inline">
                                     <%
                                     String id =(String)session.getAttribute("id");
-                                    System.out.println("id :"+id);
+                                    System.out.println("header.jsp / id :"+id);
                                     if(id == null){
                                     %>
                                         <li><a href="/member/login">로그인</a></li>
-                                        <li><a href="/member/joinForm">회원가입</a></li>
+                                        <li><a href="/member/signIn">회원가입</a></li>
                                     <%}else{ %>
                                         <li><a href="/member/logout">로그아웃</a></li>
                                         <li><a href="/mypage">마이페이지</a></li>

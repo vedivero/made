@@ -6,7 +6,9 @@
         <meta charset="utf-8">
         <title>Made</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Navigation -->
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/main/assets/css/style.css">
+		<jsp:include page="../include/header.jsp"/>
     </head>
 
     <body data-spy="scroll" data-target=".navbar-collapse">
@@ -23,47 +25,40 @@
             </div>
         </div><!--End off Preloader -->
 
-		<!-- Navigation -->
-		<jsp:include page="./include/header.jsp"/>
 
 <!-- ----------------------------------------------------------------------------------- -->
-        
 <div class="container" style="margin-top: 150px;">
-	<div class="row">
-
-	<!-- Side Bar -->
-	<div class="col-lg-3">
-				
-		<br>
-		
-		<div class="form-inline">
-		</div>
-		
-		
-		
-		  <h2 class="my-4" style="text-align: center;">카테고리</h2>
-		
-      
-        <div class="list-group">
-          <a href="/goods/list?category=컴퓨터" class="list-group-item" style="text-align: center;">menu1</a>
-          <a href="/goods/list?category=디지털" class="list-group-item" style="text-align: center;">menu2</a>
-        </div>
-	</div>
-<!-- side bar & content 경계선 -->
 	
 	
 	<!-- Content -->
-	<div class="col-lg-9">
+	<div class="col-lg-12">
 
-			<h1>Content</h1>
+        <!-- wrapper -->
+        <div id="wrapper">
+
+            <!-- content-->
+            <div id="content">
+				<form action="/member/join" method="post" accept-charset="UTF-8" name="joinForm">
+                
+                
+ 			
+                <!-- JOIN BTN-->
+                <div class="">
+					<input type="button" value="가입하기" onclick="">
+                </div>
+                </form>
+            </div> 
+            <!-- content-->
+			
+        </div> 
+        <!-- wrapper -->
     </div><!-- /.row -->
   </div>
-</div>
 
 <!-- ----------------------------------------------------------------------------------- -->
 
 		<!-- Footer -->
-		<jsp:include page="./include/footer.jsp"/>
+		<jsp:include page="../include/footer.jsp"/>
 		<!-- Footer -->
 		
     </body>
