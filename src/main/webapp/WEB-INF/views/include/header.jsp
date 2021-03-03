@@ -110,7 +110,7 @@
 					<!--navbar menu -->
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#home">게시판</a></li>                    
+                            <li><a href="/board/list">게시판</a></li>                    
                             <li><a href="#">사진공유</a></li>
                             <li><a href="#">실시간 채팅</a></li>
                         </ul>
