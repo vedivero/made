@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="com.made.mappers.board">
+<mapper namespace="com.made.mappers.boardMapper">
   
 	<select id="list" resultType="com.made.domain.BoardVO">
 		select bno,title,content,writer,regDate,viewCnt
