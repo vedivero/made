@@ -11,7 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.made.persistence.BoardDAO;
 import com.made.domain.BoardVO;
 import com.made.service.BoardService;
 
@@ -25,6 +24,8 @@ public class BoardController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 	
+	
+	//게시판 리스트
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public void getList(Model model)throws Exception{
 		
@@ -36,5 +37,24 @@ public class BoardController {
 		model.addAttribute("list", list);
 		
 	}
+	
+	//게시물 작성
+	@RequestMapping(value = "/write", method = RequestMethod.GET)
+	public void getWrite()throws Exception{
+		
+	}
+	
+	//게시물 작성
+	@RequestMapping(value = "/write", method = RequestMethod.POST)
+	public String postWrite(BoardVO vo)throws Exception{
+		
+		service.write(vo);
+		
+		System.out.println("postWrite()에 넘어오는 vo : "+vo);
+		
+		return "redirect:/board/list";
+	}
+	
+	
 	
 }

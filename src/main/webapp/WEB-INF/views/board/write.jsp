@@ -13,36 +13,20 @@
     <body>
 <!-- ----------------------------------------------------------------------------------- -->
 	
-	게시판.jsp
+	<form method="post" style="margin-top: 150px;">
+		
+		<label>제목</label>
+			<input type="text" name="title" /><br />
+		
+		<label>작성자</label>
+			<input type="text" name="writer" /><br />
+		
+		<label>내용</label>
+			<textarea cols="50" rows="5" name="content"></textarea><br />
+		
+		<button type="submit">작성</button>
 	
-	<table style="margin-top: 150px;">
-	 	<thead>
-	 		 <tr>
- 			   <th>번호</th>
-			   <th>제목</th>
-			   <th>작성일</th>
-			   <th>작성자</th>
-			   <th>조회수</th>
-	 		 </tr>
-		 </thead>
-	 
-	 <tbody>
-		  <c:forEach items="${list}" var="list">
-			 <tr>
-			  <td>${list.bno}</td>
-			  <td>${list.title}</td>
-			  <td>${list.regDate}</td>
-			  <td>${list.writer}</td>
-			  <td>${list.viewCnt}</td>
-			 </tr>
-			</c:forEach>
-	 </tbody>
-	
-	</table>
-
-	<button onclick="location.href='/board/write'">글쓰기</button>
-	
-	
+	</form>
 <!-- ----------------------------------------------------------------------------------- -->
 
 		<!-- Footer -->

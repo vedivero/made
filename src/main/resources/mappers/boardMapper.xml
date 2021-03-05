@@ -5,9 +5,15 @@
   
 <mapper namespace="com.made.mappers.boardMapper">
   
+  	<!-- 게시판 리스트 -->
 	<select id="list" resultType="com.made.domain.BoardVO">
 		select bno,title,content,writer,regDate,viewCnt
 		from board
 	</select>
 	
+	<!-- 게시물 작성 -->
+	<insert id="write" parameterType="com.made.domain.BoardVO">
+		insert into board(title,content,writer)
+		values (#{title},#{content},#{writer})
+	</insert>
 </mapper>

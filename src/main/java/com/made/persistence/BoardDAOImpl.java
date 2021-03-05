@@ -24,4 +24,11 @@ public class BoardDAOImpl implements BoardDAO {
 	  return session.selectList(namespace + ".list");
 	 }
 
+	 //게시판 글쓰기
+	@Override
+	public void write(BoardVO vo) throws Exception {
+
+		session.insert(namespace+ ".write",vo);
+	}
+
 }
